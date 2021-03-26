@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <title>Cadastro Cliente</title>
+        <!-- CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link type="text/css" href="css/estilo.css" rel="stylesheet">   
+        <link rel="shortcut icon" href="icons/world_connection.ico">    
+    </head>
+    
+    <body>
+        
+        <section class="container" id="tela_cadastro" >
+            
+            <section class="botao_cadastrar">
+                <a href="Index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
+            </section>
+
+            <section id="cadastro_logo">
+                <picture>
+                    <img src="icons/logo_light_vetor_colorido.png" id="img_login">
+                </picture>
+            </section>
+            
+            
+            <form name="cadastro_usuario" action="cadastrar_usuario.php" method="POST">
+                <section class="form-row">
+                    <section class="col">
+                        <section class="form-group">
+                            <label>Nome de Usuário</label>
+                            <input type="text"  name="nome" maxlength="50" class="form-control" autocomplete="off" required placeholder="Nome Completo">
+                        </section>
+                    </section>
+
+                    <section class="col">
+                        <section class="form-group">
+                            <label>E-mail</label>
+                            <input type="email"  name="email" maxlength="50" class="form-control" autocomplete="off" required placeholder="E-mail">
+                        </section> 
+                    </section>
+                </section>
+
+                    <section class="form-row">
+                        <section class="col">
+                            <section class="form-group">
+                                <label>Número</label>
+                                <input type="tel" maxlength="12" name="numero" class="form-control" autocomplete="off" required placeholder="digite apenas números">
+                            </section>
+                        </section>
+
+                        <section class="col">
+                            <section class="form-group">
+                                <label>CPF/CNPJ</label>
+                                <input type="text" maxlength="14" name="cpf_cnpj" class="form-control" autocomplete="off" required placeholder="digite apenas números">
+                            </section>
+                        </section>
+                    </section>
+
+                    <section class="form-group">
+                        <label>Pessoa</label>
+                        <select name="flag" class="form-control" id="flag">
+                            <option value="Pessoa Física">Pessoa Física</option>
+                            <option value="Pessoa Jurídica">Pessoa Jurídica</option>
+                        </select>
+                    </section>
+
+                    <section class="form-row">
+                        <section class="col">
+                            <section class="form-group">
+                                <label>Senha</label>
+                                <input id="senha" type="password"  maxlength="8" name="senha" class="form-control" autocomplete="off" required placeholder="Senha">
+                            </section> 
+                        </section>
+
+                        <section class="col">
+                            <section class="form-group">
+                                <label>Repetir Senha</label>
+                                <input type="password"  name="senha2" maxlength="8" class="form-control" autocomplete="off" required placeholder="Repetir Senha" oninput="validaSenha(this)">
+                            </section> 
+                        </section>
+                    </section>
+
+                    <section class="botao_cadastrar">
+                        <button name="Cadastrar" value="Cadastrar" type="submit" class="btn btn-sm btn-primary">Cadastrar</button>
+                        <input class="btn btn-sm btn-primary" type="reset" value="Resetar">
+                    </section>
+            </form>
+        </section>
+
+        <footer>
+            <!-- JS -->
+            <script src="js/jquery-3.5.1.min.js"></script>
+            <script src="js/bootstrap.bundle.min.js"></script>
+            <!-- Valida Senha -->
+            <script src="js/valida_senha.js"></script>           
+        </footer>
+    </body>
+</html>
